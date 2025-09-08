@@ -59,5 +59,5 @@ data = {
 
 df = pd.read_csv('./datafile/Output1.csv',index_col='Name')
 # print(df.loc['Ram'])
-print(df.iloc[1])
+# print(df.iloc[1])
 print(df.to_string())
