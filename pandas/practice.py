@@ -57,7 +57,9 @@ data = {
 # print(df.loc['a']) # loc is use and return specific row's and use to index name and index like ('name' and 0)
 # print(df.loc[['a','b']]) # loc multiple use  index and return specific row's
 
-df = pd.read_csv('./datafile/Output1.csv',index_col='Name')
+### read csv file and name index create
+# df = pd.read_csv('./datafile/Output1.csv',index_col='Name')
 # print(df.loc['Ram'])
 # print(df.iloc[1])
-print(df.to_string())
+# print(df.to_string())
+
