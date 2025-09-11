@@ -172,27 +172,33 @@ data = {
 # Create DataFrame
 
 df = pd.DataFrame(data)
+# print(df['Category'].duplicated()) # duplicate record's find and return true
+# print(df)
+
+df = pd.Series([1,2,3,1,4,5,2])
+df.drop_duplicates(inplace=True) # it is use to delete duplicate recrod's
+print(df.to_string())
 
 # print(df.groupby("Category")["Price"].sum())
 # print(df.groupby("Category")["Brand"].sum())
 # print(df)
 
 
-df_customer = pd.DataFrame({
-    "CustomerId":[1,2,3],
-    "CustomerName":["Ramesh","Suresh","Kalpesh"]
-})
-df_oreder = pd.DataFrame({
-    "CustomerId":[2,1,4],
-    "OrderAmt":[400,899,599]
-})
+# df_customer = pd.DataFrame({
+#     "CustomerId":[1,2,3],
+#     "CustomerName":["Ramesh","Suresh","Kalpesh"]
+# })
+# df_oreder = pd.DataFrame({
+#     "CustomerId":[2,1,4],
+#     "OrderAmt":[400,899,599]
+# })
 
-# df = pd.merge(df_customer,df_oreder,how='inner',on='CustomerId')
+# # df = pd.merge(df_customer,df_oreder,how='inner',on='CustomerId')
+# # print(df)
+
+
+# df = pd.concat([df_customer,df_oreder],axis=1)
 # print(df)
 
-
-df = pd.concat([df_customer,df_oreder],axis=1)
-print(df)
-
-df = pd.concat([df_customer,df_oreder],axis=0,ignore_index=True)
-print(df)
+# df = pd.concat([df_customer,df_oreder],axis=0,ignore_index=True)
+# print(df)
